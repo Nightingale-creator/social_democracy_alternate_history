@@ -20,7 +20,7 @@ The PFJP is torn between many different ideological currents. What should be our
 - @easy_discard
 
 
-@centrist
+@liberal
 on-arrival: {!
 if (Q.ideology && Q.ideology != "liberal") {
     Q.changed = 1;
@@ -29,29 +29,29 @@ if (Q.ideology && Q.ideology != "liberal") {
 go-to: changed if changed = 1
 on-departure: ideology = "liberal"; liberal_strength += 10; liberal_dissent -= 10; capitalist_dissent -= 5; socdem_dissent -= 5
 
-The Center Marxists, represented by 1949 and Kronas, support a middle course of preparing for revolution while building up the consciousness of the working class.
+The Liberals, represented by 1949 and Kronas, support a middle course of Economic Freedom and Social Justice.
 
-@labor
+@socdem
 on-arrival: {!
-if (Q.ideology && Q.ideology != "labor") {
+if (Q.ideology && Q.ideology != "socdem") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
+on-departure: ideology = "socdem"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
 
 The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
 
-@reform
+@capitalist
 on-arrival: {!
-if (Q.ideology && Q.ideology != "reformist") {
+if (Q.ideology && Q.ideology != "capitalist") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
+on-departure: ideology = "capitalist"; capitalist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
 
-The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+.
 
 @changed
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
