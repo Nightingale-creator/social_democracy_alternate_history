@@ -10,14 +10,13 @@ max-visits: 3
 
 = Questions of Ideology
 
-The SPD is torn between many different ideological currents. What should be our primary ideological guidance for now?
+The PFJP is torn between many different ideological currents. What should be our primary ideological guidance for now?
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
-- @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions to improve the lives of workers.
-- @reform: Following Eduard Bernstein, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
+- @centrist: The Social Democracy of Frederic Kerrigan remains the best way to resolve our goals.
+- @labor: We should work with the Industrialists to improve the economy.
+- @reform: Following Dahnal Kronas, we should work for Liberalism, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
 @class_struggle
