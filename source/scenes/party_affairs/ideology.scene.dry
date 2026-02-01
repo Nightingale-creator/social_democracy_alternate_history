@@ -14,32 +14,22 @@ The PFJP is torn between many different ideological currents. What should be our
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @centrist: The Social Democracy of Frederic Kerrigan remains the best way to resolve our goals.
-- @labor: We should work with the Industrialists to improve the economy.
-- @reform: Following Dahnal Kronas, we should work for Liberalism, strengthen democracy, and expand the party's electorate.
+- @socdem: The Social Democracy of Frederic Kerrigan remains the best way to resolve our goals.
+- @capitalist: We should work with the Industrialists to improve the economy.
+- @liberal: Following Dahnal Kronas, we should work for Liberalism, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
-@class_struggle
-on-arrival: {!
-if (Q.ideology && Q.ideology != "left") {
-    Q.changed = 1;
-}
-!}
-go-to: changed if changed = 1
-on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
-
-The radical left of the party supports a course of class struggle, and potentially a reconcilliation with the Communists.
 
 @centrist
 on-arrival: {!
-if (Q.ideology && Q.ideology != "centrist") {
+if (Q.ideology && Q.ideology != "liberal") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
+on-departure: ideology = "liberal"; liberal_strength += 10; liberal_dissent -= 10; capitalist_dissent -= 5; socdem_dissent -= 5
 
-The Center Marxists, represented by Kautsky and Hilferding, support a middle course of preparing for revolution while building up the consciousness of the working class.
+The Center Marxists, represented by 1949 and Kronas, support a middle course of preparing for revolution while building up the consciousness of the working class.
 
 @labor
 on-arrival: {!
