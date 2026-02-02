@@ -26,8 +26,8 @@ if (Q.ideology && Q.ideology != "liberal") {
     Q.changed = 1;
 }
 !}
-go-to: changed if changed = 1
-on-departure: ideology = "liberal"; liberal_strength += 10; liberal_dissent -= 10; capitalist_dissent -= 5; socdem_dissent -= 5
+go-to: changed if changed = 1democratization += 1;
+on-departure: ideology = "liberal"; lib_strength += 10; lib_dissent -= 10; cap_dissent -= 5; socdem_dissent -= 5;democratization+=1
 
 The Liberals, represented by 1949 and Kronas, support a middle course of Economic Freedom and Social Justice.
 
@@ -38,7 +38,7 @@ if (Q.ideology && Q.ideology != "socdem") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "socdem"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
+on-departure: ideology = "socdem"; labor_strength += 10; wtb_support += 1; socdem_dissent -=5 ; cps_relation +=5 ;democratization += 1
 
 The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
 
@@ -49,11 +49,11 @@ if (Q.ideology && Q.ideology != "capitalist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "capitalist"; capitalist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
-
+on-departure: ideology = "capitalist"; cap_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
+The Capitalist faction of Frens Richter supports further economic decentralisation and the free market.
 .
 
 @changed
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
+on-arrival: socdem_dissent += 5; lib_dissent += 5; socdem_dissent += 5; cap_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.
