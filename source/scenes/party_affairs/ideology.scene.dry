@@ -50,8 +50,9 @@ if (Q.ideology && Q.ideology != "capitalist") {
 !}
 go-to: changed if changed = 1
 on-departure: ideology = "capitalist"; cap_strength += 10; democratization += 1; cap_dissent -= 5;moderate_plan_support += 1
+
 The Capitalist faction of Frens Richter supports further economic decentralisation and the free market.
-.
+
 
 @changed
 on-arrival: socdem_dissent += 5; lib_dissent += 5; socdem_dissent += 5; cap_dissent += 5
