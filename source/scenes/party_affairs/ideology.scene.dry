@@ -26,7 +26,7 @@ if (Q.ideology && Q.ideology != "liberal") {
     Q.changed = 1;
 }
 !}
-go-to: changed if changed = 1democratization += 1;
+go-to: changed if changed = 1
 on-departure: ideology = "liberal"; lib_strength += 10; lib_dissent -= 10; cap_dissent -= 5; socdem_dissent -= 5;democratization+=1
 
 The Liberals, represented by 1949 and Kronas, support a middle course of Economic Freedom and Social Justice.
