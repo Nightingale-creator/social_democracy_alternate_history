@@ -48,7 +48,7 @@ Q.dissent_percent = 5;
 // factions
 Q.factions = ['Social_Democrats', 'Liberals', 'Capitalists',];
 // should this be normalized to 100%?
-Q.socdem_strength = 15;
+Q.socdem_strength = 20;
 Q.socdem_dissent = 20;
 Q.lib_strength = 30;
 Q.lib_dissent = 0;
@@ -170,7 +170,7 @@ Q.pro_republic = 59;
 Q.emergency_rule = 0;
 
 // minimum percentage of votes to be represented in the Reichstag
-Q.electoral_threshold = 0;
+Q.electoral_threshold =10;
 // constitutional reform level
 Q.constitutional_reform = 0;
 // constructive vote of no confidence
@@ -291,9 +291,9 @@ Q.catholics_other = 12;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
+Q.spd_r = 40;
 Q.kpd_r = 9;
-Q.z_r = 17;
+Q.z_r = 60;
 Q.ddp_r = 6;
 Q.dvp_r = 10;
 Q.dnvp_r = 20;
