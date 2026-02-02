@@ -100,7 +100,7 @@ Q.moderate_plan_adopted = 0;
 Q.usp_relation = 35;
 Q.cps_relation = 40;
 Q.wpb_relation = 60;
-Q.dvp_relation = 35;
+Q.slp_relation = 35;
 // DNVP and NSDAP are invariably hostile
 Q.nfp_relation = 0;
 
