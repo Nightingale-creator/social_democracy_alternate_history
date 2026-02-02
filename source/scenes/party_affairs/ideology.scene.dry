@@ -21,7 +21,7 @@ The PFJP is torn between many different ideological currents. What should be our
 
 
 @liberal
-on-arrival: {!
+on-arrival:{!
 if (Q.ideology && Q.ideology != "liberal") {
     Q.changed = 1;
 }
