@@ -6,12 +6,12 @@ is-card: true
 on-arrival: month_actions += 1; inter_party_relationships_timer = 6;
 card-image: img/weimar_coalition_2.jpg
 max-visits: 12
-#subtitle: Building relations with the other political parties of Germany.
+#subtitle: Building relations with the other political parties of Sordland.
 
 = Inter-Party Relationships
 
-Sometimes to form Government a coalition is necessary with other parties,or perhaps we can stand alone
-The SPD cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties.We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+Sometimes to form Government a coalition is necessary with other parties,or perhaps we can stand alone.
+
 
 - @USP: Strengthen our bonds with the USP.
 - @WPB: Strengthen our bonds with the Bludish Worker's Party.
@@ -27,7 +27,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; kpd_inter_party_seen += 1
 
 
-@center_op
+@USP_op
 on-arrival: usp_relation += 5*(1 - dissent)
 
 We are currently in opposition to the USP-led government, but that does not preclude the general building of feelings of good will.
