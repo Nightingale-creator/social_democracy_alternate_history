@@ -76,21 +76,21 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">USP</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Center Party">USP</span>!}: [+ usp_relation : relationships +]
 
 {!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">WPB</span>!}: [+ dvp_relation : relationships +]
+{!<span class="tooltip-text" title="German People's Party">WPB</span>!}: [+ wpb_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">CPS</span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="Communist Party of Germany">CPS</span>!}: [+ cps_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">NFP</span>!}: [+ dnvp_relation : relationships +]
+{!<span class="tooltip-text" title="German National People's Party">NFP</span>!}: [+ nfp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">SLP</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">SLP</span>!}: [+ slp_relation : relationships +]
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the CPS.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+
 
 {!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Liberal</span>!} strength: [+ lib_strength : strength +], dissent: [+ lib_dissent : dissent +]
 
@@ -158,21 +158,21 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+PFJP: [+ spd_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
-Z + BVP: [+ z_votes +]%
+USP: [+ z_votes +]%
 
 KPD: [+ kpd_votes +]%
 
 [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
 
-DVP: [+ dvp_votes +]%
+WPB: [+ dvp_votes +]%
 
-DNVP: [+ dnvp_votes +]%
+NFP: [+ dnvp_votes +]%
 
-NSDAP: [+ nsdap_votes +]%
+SLP: [+ nsdap_votes +]%
 
 Others: [+ other_votes +]%
 
