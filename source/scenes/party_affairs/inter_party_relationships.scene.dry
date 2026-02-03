@@ -28,12 +28,12 @@ on-arrival: resources -= 1; kpd_inter_party_seen += 1
 
 
 @USP_op
-on-arrival: usp_relation += 5*(1 - dissent)
+on-arrival: z_relation += 5*(1 - dissent)
 
 We are currently in opposition to the USP-led government, but that does not preclude the general building of feelings of good will.
 
 @USP_coalition
-on-arrival: usp_relation += 8*(1 - dissent)
+on-arrival: z_relation += 8*(1 - dissent)
 
 We are currently coalition partners with them, so improving relations comes naturally.
 
@@ -46,7 +46,7 @@ The Brüning semi-autocratic regime makes building friendly relations difficult,
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; cps_relation += 5*(1 - dissent)
+on-arrival: resources -= 1; kpd_relation += 5*(1 - dissent)
 
 The Communists had originally split from us,it may be beneficial to repair relations with them.
 
@@ -54,7 +54,7 @@ The Communists had originally split from us,it may be beneficial to repair relat
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources
-on-arrival: wpb_relation += 5*(1 - dissent)
+on-arrival: dvp_relation += 5*(1 - dissent)
 
 The WPB share some of our goals,it could be helpful if they have friendly relations with us.
 
