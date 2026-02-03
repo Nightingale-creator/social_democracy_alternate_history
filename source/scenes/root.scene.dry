@@ -97,12 +97,12 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.usp_relation = 35;
-Q.cps_relation = 40;
+Q.usp_relation = 40;
+Q.cps_relation = 35;
 Q.wpb_relation = 60;
-Q.slp_relation = 35;
+Q.slp_relation = 45;
 // DNVP and NSDAP are invariably hostile
-Q.nfp_relation = 0;
+Q.nfp_relation = 10;
 
 Q.cps_leader = "Stahler";
 // alternative is the Conciliators as party leader
