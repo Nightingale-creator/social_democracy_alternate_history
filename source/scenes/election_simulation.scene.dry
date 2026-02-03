@@ -284,34 +284,34 @@ The electoral system is essentially proportional, with the proportion of Reichst
 **Election results:**
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]
+PFJP: [+ spd_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+USP: [+ z_r +]
 
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]
+CPS: [+ kpd_r +]
 
 # 1928: 5, 1930: 4 (as DstP)
 DDP: [+ ddp_r +]
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
+WPB: [+ dvp_r +]
 
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
+NFP: [+ dnvp_r +]
 
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
+SLP: [+ nsdap_r +]
 
 # 1928: 9, 1930: 10
 Other: [+ other_r +]
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
+Holsord Coalition (PFJP + USP + WPB): [+ weimar_coalition +]
 
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
+Grand Coalition (PFJP + USP): [+ grand_coalition +]
 
 Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
 
