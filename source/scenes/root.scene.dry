@@ -107,7 +107,7 @@ Q.nfp_relation = 10;
 Q.cps_leader = "Stahler";
 // alternative is the Conciliators as party leader
 Q.cps_party_leader = "Stahler";
-Q.z_leader = "Brüning";
+Q.z_leader = "Ludwig";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.usp_party_leader = "Alphonso";
 Q.nfp_leader = "Kibener";
