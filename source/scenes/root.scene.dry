@@ -109,6 +109,7 @@ Q.cps_leader = "Stahler";
 Q.cps_party_leader = "Stahler";
 Q.z_leader = "Kroos";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
+Q.z_party_leader = "Kroos";
 Q.usp_party_leader = "Alphonso";
 Q.nfp_leader = "Kibener";
 
