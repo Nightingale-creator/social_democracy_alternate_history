@@ -1,40 +1,36 @@
 title: Center Party Conference
 subtitle: The Center Party chooses their new leader...
-view-if: year = 1928 and month = 12 and z_party_leader = "Marx"
+view-if: year = 1928 and month = 12 and z_party_leader = "Kroos"
 max-visits: 1
 tags: event
 new-page: true
 
-= Center Party Conference
+= PFJP Party Conference
 
 # reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
 
-Wilhelm Marx, former Center Party chancellor and presidential candidate, has chosen to resign from leadership of the Center Party. Now, the party holds a conference to replace him.
+Ludwig van Kroos, former PFJP chairmam and presidential candidate, has been forced to resign from leadership of the PFJP due to a sex scandal. Now, our party holds a conference to replace him.
 
-The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the SPD than most of the Center Party.
+The consensus candidate on the right is Frens Richter, a businessman who represents the party's industrialists. On the left, there is Manholy Suheil, a leader of the Catholic trade unions, who has been more supportive of cooperation with the CPS than most of our Party.Finally there is Dahnal Kronas who lies in the center of our party. 
 
-- @kaas: The Center Party elects Ludwig Kaas as the party chair.
-- @joos: Influence the Center Party to select Joseph Joos as the party chair.
-- @joos_campaign: We must hold a campaign in support of Joseph Joos as party chair.
+- @fr: The PFJP elects Frens Richter as the party chair.
+- @dk: The Party selects Dahnal Kronas as the party chair.
+- @ms: We must .
 
-@kaas
-on-arrival: z_party_leader = "Kaas"; z_relation -= 5
+@fr
+subtitle: This decision will upset the left. 
+on-arrival:cps_relation -= 5;z_party_leader = "Richter"; socdem_dissent += 5;cap_strength +=10; socdem_strength -=5; cap_dissent -=5;slp_relation +=5
 
-Ludwig Kaas has been selected as the chairman of the Center Party. He seems to represent a rightward turn from Marx, and will preside over a Center Party less inclined to compromise with the left.
+Frens Richter has been selected as the chairman of our party. He seems to represent a rightward turn from Kroos, and will preside over a Party less inclined to compromise with the left.Yet he is still a staunch reformist, the left is brooding over this result. 
 
-@joos
-unavailable-subtitle: Our relations are not good enough.
-subtitle: Joos is likely to be friendlier to us than Kaas.
-choose-if: z_relation >= 70
-on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
+@dk
+subtitle: Kronas won't change much and shares a similar ideology to Kroos. 
+on-arrival: z_party_leader = "Kronas"; lib_strength +=10; cap_dissent -=5; socdem_dissent -=5
 
-With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+Our party has continued the path of compromise. Both Left and Right factions have been satisfied as neither gains anything over the other. Stability has been maintained in the party. 
 
-@joos_campaign
-choose-if: z_relation >= 62 and resources >= 1 
-view-if: z_relation < 70
-unavailable-subtitle: [? if z_relation <= 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
-subtitle: -1 resource. Joos is likely to be friendlier to us than Kaas.
-on-arrival: resources -= 1; z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
+@ms
+subtitle: This might upset the industrialists. 
+on-arrival: z_party_leader = "Suheil"; cps_relation += 5; workers_spd += 3; socdem_ ; socdem_
 
-With our grassroots connections as well as a professional campaign, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+We have been able to influence the delegates to support Manholy Suheil as the new  chairwoman,and will be more inclined to collaborate with the CPS compared to others in the party. She also increases the appeal of the PFJP to the working class.
