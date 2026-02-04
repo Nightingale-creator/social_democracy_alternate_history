@@ -31,6 +31,6 @@ Our party has continued the path of compromise. Both Left and Right factions hav
 
 @ms
 subtitle: This might upset the industrialists. 
-on-arrival: z_party_leader = "Suheil"; cps_relation += 5; workers_spd += 3; socdem_ ; socdem_
+on-arrival: z_party_leader = "Suheil"; cps_relation += 5; workers_spd += 3; socdem_strength += 10; socdem_dissent +=10
 
 We have been able to influence the delegates to support Manholy Suheil as the new  chairwoman,and will be more inclined to collaborate with the CPS compared to others in the party. She also increases the appeal of the PFJP to the working class.
