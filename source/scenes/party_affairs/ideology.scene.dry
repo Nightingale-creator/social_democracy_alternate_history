@@ -14,9 +14,9 @@ The PFJP is torn between many different ideological currents. What should be our
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @socdem: The Social Democracy of Frederic Kerrigan remains the best way to resolve our goals.
-- @capitalist: We should work with the Industrialists to improve the economy.
-- @liberal: Following Dahnal Kronas, we should work for Liberalism, strengthen democracy, and expand the party's electorate.
+- @socdem: The Social Democracy of Manholy Suheil remains the best way to resolve our goals.
+- @capitalist: We should work with the Industrialists of Richter to improve the economy.
+- @liberal: Following our Center, we should work for Liberalism, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
 
@@ -29,7 +29,7 @@ if (Q.ideology && Q.ideology != "liberal") {
 go-to: changed if changed = 1
 on-departure: ideology = "liberal"; lib_strength += 10; lib_dissent -= 10; cap_dissent -= 5; socdem_dissent -= 5;democratization+=1
 
-The Liberals, represented by 1949 and Kronas, support a middle course of Economic Freedom and Social Justice.
+The Liberals, represented by Kroos and Kronas, support a middle course of Economic Freedom and Social Justice.
 
 @socdem
 on-arrival: {!
