@@ -31,8 +31,8 @@ We have increased our campaigning among the workers. [? if unemployed >= 15: The
 @new_middle
 subtitle: -1 resources
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: new_middle_spd += 6*(1-dissent); if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
+unavailable-subtitle: Not enough resource
+on-arrival: new_middle_spd += 6*(1-dissent);
 
 We have increased our campaigning among the new middle class,they have formed the base of our support. [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
@@ -66,4 +66,4 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: catholics_spd += 3*(1-dissent); resources -= 1
 
-We have increased our campaigning among Bluds.
+We have increased our campaigning among Bludish people.
