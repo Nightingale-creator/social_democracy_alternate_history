@@ -13,7 +13,7 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The Far left,CPS and the Far Right NFP .
+- @anti_dem: The Far left,CPS and the Far Right NFP.
 - @far_right: The far right - the NFP.
 - @nsdap: The WPB alone.
 - @kpd: The Communist CPS.
