@@ -74,15 +74,13 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">USP</span>!}: [+ usp_relation : relationships +]
+{!<span class="tooltip-text" title="United Sordland Party">USP</span>!}: [+ usp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Worker's Party of Bludia">WPB</span>!}: [+ wpb_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">WPB</span>!}: [+ wpb_relation : relationships +]
+{!<span class="tooltip-text" title="Communist Party of Sordland">CPS</span>!}: [+ cps_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">CPS</span>!}: [+ cps_relation : relationships +]
-
-{!<span class="tooltip-text" title="German National People's Party">NFP</span>!}: [+ nfp_relation : relationships +]
+{!<span class="tooltip-text" title="National Front Party">NFP</span>!}: [+ nfp_relation : relationships +]
 
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">SLP</span>!}: [+ slp_relation : relationships +]
 
@@ -163,8 +161,6 @@ PFJP: [+ spd_votes +]%
 USP: [+ z_votes +]%
 
 KPD: [+ kpd_votes +]%
-
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
 
 WPB: [+ dvp_votes +]%
 
