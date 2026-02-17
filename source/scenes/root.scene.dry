@@ -172,7 +172,7 @@ Q.pro_republic = 59;
 Q.emergency_rule = 0;
 
 // minimum percentage of votes to be represented in the Reichstag
-Q.electoral_threshold =10;
+Q.electoral_threshold = 10;
 // constitutional reform level
 Q.constitutional_reform = 1;
 // constructive vote of no confidence
