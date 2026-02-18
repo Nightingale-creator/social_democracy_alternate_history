@@ -265,7 +265,7 @@ Q.rural_z = 45;
 Q.rural_ddp= 0;
 Q.rural_dvp = 5;
 Q.rural_dnvp = 15;
-Q.rural_nsdap = 5;
+Q.rural_nsdap = 0;
 Q.rural_other = 10;
 
 Q.unemployed_spd = 25;
@@ -335,8 +335,8 @@ Q.chancellor_party = 'z';
 Q.spd_in_government = 0;
 Q.z_in_government = 1;
 Q.ddp_in_government = 0;
-Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
+Q.dvp_in_government = 0;
+Q.dnvp_in_government = 0;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
