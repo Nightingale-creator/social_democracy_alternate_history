@@ -724,20 +724,20 @@ There is no path to a majority government for now. The scheming around President
 # if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
 
 @spd_majority
-title: SPD majority alone
-subtitle: SPD: [+ spd_r +]%
+title: PFJP majority alone
+subtitle: PFJP: [+ spd_r +]%
 view-if: spd_r >= 50
-on-arrival: chancellor = "Empty"; chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
+on-arrival: chancellor = "Empty"; chancellor_party = "PFJP"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
 achievement: majority_party
 
-Finally, the SPD can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
+Finally, the PFJP can govern! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
-Who should be chancellor?
+Who should be Speaker?
 
-- @braun_majority_chancellor: Otto Braun for Chancellor.
-- @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @muller_majority_chancellor: Hermann Müller for Chancellor.
-- @wels_majority_chancellor: Otto Wels for Chancellor.
+- @braun_majority_chancellor: Dahnal Kronas for Speaker.
+- @breitscheid_majority_chancellor: Manholy Suheil for Speaker.
+- @muller_majority_chancellor: Frederic Kerrigan for Speaker.
+- @wels_majority_chancellor: Frens Richter for Chancellor.
 
 @braun_majority_chancellor
 view-if: not historical_mode or not spd_prussia
