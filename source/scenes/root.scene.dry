@@ -261,9 +261,9 @@ Q.new_middle_other = 15;
 
 Q.rural_spd = 10;
 Q.rural_kpd = 0;
-Q.rural_z = 5;
+Q.rural_z = 45;
 Q.rural_ddp= 5;
-Q.rural_dvp = 45;
+Q.rural_dvp = 5;
 Q.rural_dnvp = 15;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
