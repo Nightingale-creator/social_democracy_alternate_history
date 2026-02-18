@@ -1,6 +1,6 @@
 title: Presidential Election
 subtitle:The USP runs for re-election...
-view-if: year = 1929 and month = 4 and presidential_election_seen = 0
+view-if: year = 1929 and month = 11 and presidential_election_seen = 0
 frequency: 1000
 max-visits: 1
 new-page: true
@@ -22,9 +22,9 @@ Some are calling for us to support the USP candidate Alphonso, despite his affil
 
 [? if cps_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Stahler or our own candidate. ?]
 
-- @support_braun:=Run [+ z_leader +] of the PFJP must be run.
-- @support_hindenburg: Support Hindenburg.
-- @support_thalmann: Support Ernst Thälmann of the KPD.
+- @support_braun: Run [+ z_party_leader +] of the PFJP.
+- @support_hindenburg: Support Alphonso.
+- @support_thalmann: Support Denis Stahler of the CPS.
 
 @support_hindenburg
 subtitle: This is not recommended.
@@ -42,7 +42,7 @@ go-to: braun_campaign
 
 It takes effort to run a campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
 
-The miniscule remnants of the Democratic Party (now called the German State Party) will likely support us. Who else will? Can we convince the Center to support Braun? What about the Communists?
+The miniscule remnants of the Democratic Party will likely support us. Who else will? Can we convince the Center to support Braun? What about the Communists?
 
 
 @support_thalmann
@@ -438,6 +438,6 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 
 
 @braun_wins
-on-arrival: president = "Braun"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: president = "[+ z_party_leader +]"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 
-Otto Braun of the SPD has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
+[+ z_party_leader +] of the PFJP has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
