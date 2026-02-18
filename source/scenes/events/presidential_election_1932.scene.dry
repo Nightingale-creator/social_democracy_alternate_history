@@ -1,6 +1,6 @@
 title: Presidential Election
-subtitle: Hindenburg runs for re-election...
-view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen = 0
+subtitle: USP runs for re-election...
+view-if: year = 1928 and month = 4 and presidential_election_seen = 0
 frequency: 1000
 max-visits: 1
 new-page: true
@@ -18,30 +18,29 @@ The presidential election is coming up soon. [? if spd_in_government = 0 : While
 # if hitler is deported, who would nsdap run? Duesterberg? or Goering?
 # Goering runs, essentially as a proxy for Hitler, who is now stateless.
 
-Many are calling for us to support the incumbent Hindenburg, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Otto Braun to run again, but he is reluctant.
+Some are calling for us to support the USP candidate Alphonso, despite his affiliation to the establishment. Is he truly the best bulwark against the NFP's ascension? On the other hand, most in our party are calling for a member of our own Party to run. 
 
-[? if kpd_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
+[? if cps_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Stahler or our own candidate. ?]
 
-
+- @support_braun: Run z_leader of the PFJP.
 - @support_hindenburg: Support Hindenburg.
-- @support_braun: Run Otto Braun of the SPD.
 - @support_thalmann: Support Ernst Thälmann of the KPD.
 
 @support_hindenburg
-subtitle: This is the default option.
+subtitle: This is not recommended.
 
-Despite his known reactionary nature, Hindenburg has at least been keeping the Nazis at bay. Thus, we must support him.
+Despite us being in opposition, Alphonso is at least a Reformist and aligns with the Capitalist Faction of our Party. Thus, we must support him.
 
 - @final_election: The final vote...
 
 @support_braun
-subtitle: This will cost us 2 resources.
-choose-if: resources >= 2
+subtitle: This will cost us 1 resource.
+choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 2; braun_campaign = 1
+on-arrival: resources -= 1; braun_campaign = 1
 go-to: braun_campaign
 
-It takes effort to run a somewhat unexpected campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
+It takes effort to run a campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
 
 The miniscule remnants of the Democratic Party (now called the German State Party) will likely support us. Who else will? Can we convince the Center to support Braun? What about the Communists?
 
