@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Assembly Elections
 new-page: true
 tags: event
 priority: -1
@@ -13,7 +13,7 @@ face-image: img/Rothe_Wahlen_1903.jpg
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+The Assembly elections are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
