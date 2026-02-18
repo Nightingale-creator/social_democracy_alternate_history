@@ -1,6 +1,6 @@
 title: Presidential Election
-subtitle: USP runs for re-election...
-view-if: year = 1928 and month = 4 and presidential_election_seen = 0
+subtitle:The USP runs for re-election...
+view-if: year = 1929 and month = 4 and presidential_election_seen = 0
 frequency: 1000
 max-visits: 1
 new-page: true
@@ -22,7 +22,7 @@ Some are calling for us to support the USP candidate Alphonso, despite his affil
 
 [? if cps_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Stahler or our own candidate. ?]
 
-- @support_braun:=z_leader of the PFJP must be run.
+- @support_braun:=Run [+ z_leader +] of the PFJP must be run.
 - @support_hindenburg: Support Hindenburg.
 - @support_thalmann: Support Ernst Thälmann of the KPD.
 
