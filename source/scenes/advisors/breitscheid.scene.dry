@@ -11,6 +11,7 @@ Kronas is a long-time PFJP leader. He came from a Upper-Middle Class family, but
 
 - @media_
 - @breitscheid_foreign
+- @coalition
 - @snap_election
 - @root: Return to main
 
@@ -25,10 +26,20 @@ go-to: media
 @breitscheid_foreign
 title: Foreign Policy
 subtitle: As Foreign Minister, Kronas can set our foreign policy.
-unavailable-subtitle: [? if not spd_in_government: The SPD is not in government. ?] [? if foreign_minister_party != "SPD" : The SPD does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if not spd_in_government: The PFJP is not in government. ?] [? if foreign_minister_party != "SPD" : The PFJP does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister_party == "SPD"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
+
+@coalition
+title: Negotiating with other parties 
+subtitle: Kronas can improve our relationships with other parties.
+choose-if: advisor_action_timer <= 0 and spd_in_government = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; usp_relation += 5; wpb_relation += 5; slp_relation += 5
+
+We have improved our relations with the USP, WPB, and SLP(though they are irrelevant), and reduced tensions with the coalition.
+
 
 @snap_election
 title: Snap Election
