@@ -74,15 +74,15 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-<span style="color: #811aa3;">USP</span>: [+ usp_relation : relationships +]
+<span style="color: #811aa3;">**USP**</span>: [+ usp_relation : relationships +]
 
-<span style="color: #D5AC27;">WPB</span>: [+ wpb_relation : relationships +]
+<span style="color: #D5AC27;">**WPB**</span>: [+ wpb_relation : relationships +]
 
-<span style="color: #8B0000;">CPS</span>: [+ cps_relation : relationships +]
+<span style="color: #8B0000;">**CPS**</span>: [+ cps_relation : relationships +]
 
-<span style="color: #954B00;">NFP</span>: [+ nfp_relation : relationships +]
+<span style="color: #954B00;">**NFP**</span>: [+ nfp_relation : relationships +]
 
-<span style="color: #69A2BE;">SLP</span>: [+ slp_relation : relationships +]
+<span style="color: #69A2BE;">**SLP**</span>: [+ slp_relation : relationships +]
 
 = Party Leadership
 
@@ -159,19 +159,19 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-<span style="color:#24d1f0;">PFJP</span>: [+ spd_votes +]%
+<span style="color:#24d1f0;">**PFJP**</span>: [+ spd_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
-<span style="color:#811aa3;">USP</span>: [+ z_votes +]%
+<span style="color:#811aa3;">**USP**</span>: [+ z_votes +]%
 
-<span style="color:#8B0000;">CPS</span>: [+ kpd_votes +]%
+<span style="color:#8B0000;">**CPS**</span>: [+ kpd_votes +]%
 
-<span style="color:#D5AC27;">WPB</span>: [+ dvp_votes +]%
+<span style="color:#D5AC27;">**WPB**</span>: [+ dvp_votes +]%
 
-<span style="color:#954B00;">NFP</span>: [+ dnvp_votes +]%
+<span style="color:#954B00;">**NFP**</span>: [+ dnvp_votes +]%
 
-<span style="color:#69A2BE;">SLP</span>: [+ ddp_votes +]%
+<span style="color:#69A2BE;">**SLP**</span>: [+ ddp_votes +]%
 
 Others: [+ other_votes +]%
 
