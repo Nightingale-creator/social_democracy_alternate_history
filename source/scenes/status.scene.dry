@@ -35,7 +35,7 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+GNA composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="People's Freedom and Justice Party">PFJP</span>!}: [+ spd_r +]%
