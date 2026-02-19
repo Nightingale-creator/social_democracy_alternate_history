@@ -263,13 +263,13 @@ go-to: hindenburg_wins if hindenburg_majority == 1; thalmann_wins if thalmann_ma
 
 Results:
 
-Hindenburg - [+ hindenburg_votes_disp +]%
+Alphonso - [+ hindenburg_votes_disp +]%
 
 [+ nsdap_candidate +] - [+ hitler_votes_disp +]%
 
 [? if kpd_support_braun == 0 : Thälmann - [+ thalmann_votes_disp +]% ?]
 
-[? if braun_campaign > 0 : Braun - [+ braun_votes_disp +]% ?]
+[? if braun_campaign > 0 : [+ z_party_leader +] - [+ braun_votes_disp +]% ?]
 
 @no_majority_round1
 on-arrival: hitler_support_hindenburg = 1 if (braun_plurality or thalmann_plurality)
@@ -438,6 +438,6 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 
 
 @braun_wins
-on-arrival: president = "[+ z_party_leader +]"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: president = "[+ z_party_leader +]"; lib_dissent -= 15; socdem_dissent -= 15; cap_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 
 [+ z_party_leader +] of the PFJP has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
