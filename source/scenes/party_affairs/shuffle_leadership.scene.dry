@@ -34,13 +34,13 @@ tags: remove_advisor
 
 
 @remove_hilferding
-title: Remove Hilferding
+title: Remove Kronas
 view-if: hilferding_advisor = 1
-on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: hilferding_advisor = 0; lib_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Hilferding has been removed as an advisor. The Centrist faction disapproves.
+Kronas has been removed as an advisor. The Lineral faction disapproves.
 
 @remove_wels
 title: Remove Wels
