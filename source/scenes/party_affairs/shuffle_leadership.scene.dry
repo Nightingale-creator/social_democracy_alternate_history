@@ -34,13 +34,13 @@ tags: remove_advisor
 
 
 @remove_hilferding
-title: Remove Kronas
+title: Remove Kroos
 view-if: hilferding_advisor = 1
 on-arrival: hilferding_advisor = 0; lib_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Kronas has been removed as an advisor. The Lineral faction disapproves.
+Kroos has been removed as an advisor. The Liberal faction disapproves.
 
 @remove_wels
 title: Remove Wels
@@ -62,13 +62,13 @@ Müller has been removed as an advisor. The Centrist faction disapproves.
 
 
 @remove_breitscheid
-title: Remove Breitscheid
+title: Remove Kronas
 view-if: breitscheid_advisor = 1
 tags: remove_advisor
 on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+Kronas has been removed as an advisor. The Liberal faction disapproves.
 
 # reformists
 
@@ -330,8 +330,8 @@ view-if: n_advisors < 3
 - #nonfactional_advisor
 
 @add_hilferding
-title: Dahnal Kronas
-subtitle: Kronas is an economist and one of our chief Democratic theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+title: Ludwig van Kroos
+subtitle: Kroos is an economist and one of our chief Democratic theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
 tags: center_advisor
@@ -342,8 +342,8 @@ go-to: advisor_menu
 Rudolf Hilferding is now an advisor.
 
 @add_wels
-title: Otto Wels
-subtitle: Otto Wels is a long-time party organizer and member of the leadership, serving under Friedrich Ebert. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+title: Ronald Zufalig
+subtitle: Ronald is a long-time party organizer and member of the leadership. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
 is-card: true
 card-image: img/portraits/WelsRudolf.jpg
 tags: center_advisor
@@ -351,7 +351,7 @@ view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: wels_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Otto Wels is now an advisor.
+Ronald is now an advisor.
 
 @add_muller
 title: Hermann Müller
@@ -366,8 +366,8 @@ go-to: advisor_menu
 Hermann Müller is now an advisor.
 
 @add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+title: Dahnal Kronas
+subtitle: Dahnal Kronas comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiations with other Parties, Foreign Policy, Media ?]
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
@@ -375,7 +375,7 @@ on-arrival: breitscheid_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: center_advisor
 
-Rudolf Breitscheid is now an advisor.
+Dahnal Kronas is now an advisor.
 
 # reformist
 
@@ -405,7 +405,7 @@ go-to: advisor_menu
 Otto Braun is now an advisor.
 
 @add_juchacz
-title: Marie Juchacz
+title: Manholy Suheil
 subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
