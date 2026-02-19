@@ -74,15 +74,15 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="United Sordland Party">USP</span>!}: [+ usp_relation : relationships +]
+{!<span class="color:#811aa3;">USP</span>!}: [+ usp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Worker's Party of Bludia">WPB</span>!}: [+ wpb_relation : relationships +]
+{!<span class="color:#D5AC27;">WPB</span>!}: [+ wpb_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Sordland">CPS</span>!}: [+ cps_relation : relationships +]
+{!<span class="color:#8B0000;">CPS</span>!}: [+ cps_relation : relationships +]
 
-{!<span class="tooltip-text" title="National Front Party">NFP</span>!}: [+ nfp_relation : relationships +]
+{!<span class=";color:#954B00;">NFP</span>!}: [+ nfp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">SLP</span>!}: [+ slp_relation : relationships +]
+{!<span class="color:#69A2BE;">SLP</span>!}: [+ slp_relation : relationships +]
 
 = Internal Factions of the <span style="color: #24d1f0;">**PFJP**</span>
 
@@ -154,34 +154,34 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-PFJP: [+ spd_votes +]%
+<span style="color:#24d1f0;">PFJP</span>: [+ spd_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
-USP: [+ z_votes +]%
+<span style="color:#811aa3;">USP</span>: [+ z_votes +]%
 
-KPD: [+ kpd_votes +]%
+<span style="color:#8B0000;">CPS</span>: [+ kpd_votes +]%
 
-WPB: [+ dvp_votes +]%
+<span style="color:#D5AC27;">WPB</span>: [+ dvp_votes +]%
 
-NFP: [+ dnvp_votes +]%
+<span style="color: #954B00;">NFP</span>: [+ dnvp_votes +]%
 
-SLP: [+ nsdap_votes +]%
+<span style="color:#69A2BE;">SLP</span>: [+ ddp_votes +]%
 
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, CPS: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: PFJP: [+ workers_spd_display +]%, USP: [+ workers_z_display +]%, CPS: [+ workers_kpd_display +]%, SLP: [+ workers_ddp_display +]%, WPB: [+ workers_dvp_display +]%; NFP: [+ workers_dnvp_display +]%, IND: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: PFJP: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: PFJP: [+ new_middle_spd_display +]%, USP: [+ new_middle_z_display +]%, CPS: [+ new_middle_kpd_display +]%, SLP: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; NFP: [+ new_middle_dnvp_display +]%, IND: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: PFJP: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: PFJP: [+ old_middle_spd_display +]%, USP: [+ old_middle_z_display +]%, CPS: [+ old_middle_kpd_display +]%, SLP: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; NFP: [+ old_middle_dnvp_display +]%, IND: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: PFJP: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: PFJP: [+ rural_spd_display +]%, USP: [+ rural_z_display +]%, CPS: [+ rural_kpd_display +]%, SLP: [+ rural_ddp_display +]%, WPB: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, IND: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: PFJP: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: PFJP: [+ unemployed_spd_display +]%, USP: [+ unemployed_z_display +]%, CPS: [+ unemployed_kpd_display +]%, SLP: [+ unemployed_ddp_display +]%, WPB: [+ unemployed_dvp_display +]%; NFP: [+ unemployed_dnvp_display +]%, IND: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: PFJP: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Bludish: PFJP: [+ catholics_spd_display +]%, USP: [+ catholics_z_display +]%, CPS: [+ catholics_kpd_display +]%, SLP: [+ catholics_ddp_display +]%, WPB: [+ catholics_dvp_display +]%; NFP: [+ catholics_dnvp_display +]%, IND: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
