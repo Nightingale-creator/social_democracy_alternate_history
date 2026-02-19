@@ -137,7 +137,7 @@ Reichswehr: [+ reichswehr_strength +] thousand troops.
 
 Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
 
-Prussian police: [+ prussian_police_strength +] thousand members.
+ Police: [+ prussian_police_strength +] thousand members.
 
 Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
