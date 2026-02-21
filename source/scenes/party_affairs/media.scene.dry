@@ -9,7 +9,7 @@ card-image: img/sangerbund.jpg
 
 = Media
 
-The PFJP runs a veritable media empire, with many newspapers throughout every Sordish city and region. We could use the media for various purposes...
+The <span style="color: #24d1f0;">**PFJP**</span> runs a veritable media empire, with many newspapers throughout every Sordish city and region. We could use the media for various purposes...
 
 - @commercial
 - @campaign
@@ -30,11 +30,11 @@ on-arrival: resources += 1; lib_dissent += 1; worker_spd += 4*(1 - dissent); une
 Our commercialized newspapers are able to bring in more funds. However, Social Democrats express their displeasure.
 
 @campaign
-title: The purpose of our media is to elect more <span style="color: #24d1f0;">Reformists</span>
+title: The purpose of our media is to elect more <span style="color: #24d1f0;">**Reformists**</span>
 subtitle: Our newspapers will focus on the electoral campaign.
 on-arrival: campaign_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 2*(1-dissent);
 
-Our campaign media is mostly reaching the middle class who are already saturated with <span style="color: #24d1f0;">Reformist</span> propaganda, but it must be doing *something*, or at least that is what we hope.
+Our campaign media is mostly reaching the middle class who are already saturated with <span style="color: #24d1f0;">**Reformist**</span> propaganda, but it must be doing *something*, or at least that is what we hope.
 
 @ideological
 title: We will have vibrant ideological debate within our newspapers.
