@@ -121,9 +121,9 @@ Q.hindenburg_enabled = 0;
 
 
 // Does the SPD lead in Prussia?
-Q.spd_prussia = 0;
+Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = <span style="color: #811aa3;">USP</span>;
+Q.prussian_government = <span style="color: #811aa3;">USP</span>
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
