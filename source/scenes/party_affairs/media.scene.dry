@@ -25,21 +25,21 @@ The PFJP runs a veritable media empire, with many newspapers throughout every So
 @commercial
 title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
 subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to socialist views.
-on-arrival: resources += 1; commercialized_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1-dissent); left_dissent += 10; labor_dissent += 10
+on-arrival: resources += 1; lib_dissent += 1; worker_spd += 4*(1 - dissent); unemployed_spd += 3*(1-dissent); socdem_dissent += 5; 
 
-Our commercialized newspapers are able to bring in more funds. However, the left and labor factions express their displeasure.
+Our commercialized newspapers are able to bring in more funds. However, Social Democrats express their displeasure.
 
 @campaign
-title: The purpose of our media is to elect more Social Democrats.
+title: The purpose of our media is to elect more <span style="color: #24d1f0;">Reformists</span>
 subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; workers_spd += 4*(1 - dissent); unemployed_spd += 2*(1-dissent);
+on-arrival: campaign_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 2*(1-dissent);
 
-Our campaign media is mostly reaching the workers who are already saturated with Socialist propaganda, but it must be doing *something*, or at least that is what we hope.
+Our campaign media is mostly reaching the middle class who are already saturated with <span style="color: #24d1f0;">Reformist</span> propaganda, but it must be doing *something*, or at least that is what we hope.
 
 @ideological
 title: We will have vibrant ideological debate within our newspapers.
 subtitle: There will be space for all factions to air their views.
-on-arrival: left_dissent -= 6; labor_dissent -= 6; center_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
+on-arrival: lib_dissent -= 6; cap_dissent -= 6; socdem_dissent -= 6; 
 
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
 
