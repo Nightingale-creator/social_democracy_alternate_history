@@ -56,12 +56,12 @@ Socialism has always stood for science and rationality. Despite the setbacks of 
 - @cancel_advisor_action
 
 @kwg
-title: Fund the Kaiser Wilhelm Society for basic scientific research.
+title: Fund the Artor Wisci Society for basic scientific research.
 subtitle: -1 budget
 choose-if: budget >= 1
 on-arrival: budget -= 1; science += 1; kwg_research += 1; economic_growth += 0.3 if economic_growth <= 8; new_middle_spd += 5*(1-dissent); ddp_relation += 5*(1-dissent); unemployed -= 0.2 if unemployed >= 4; west_relation += 1; science_funding += 1
 
-The Kaiser Wilhelm Society is one of the most respected scientific research institutions in the world, with physicist Albert Einstein as its most famous employee. Our research program is to provide the Society with additional resources to hire and train scientists and conduct fundamental research, based on the scientists' own interests.
+The Artor Wisci Society is one of the most respected scientific research institutions in the world. Our research program is to provide the Society with additional resources to hire and train scientists and conduct fundamental research, based on the scientists' own interests.
 
 @applied
 title: Fund applied research in economically useful technologies.
@@ -87,13 +87,13 @@ choose-if: science_funding >= 1
 unavailable-subtitle: We have not funded science.
 on-arrival: budget += 1; science -= 1; science_funding -= 1; applied_research -= 0.33; kwg_research -= 0.33; medical_research -= 0.33; economic_growth -= 0.5; new_middle_spd -= 5; workers_spd -= 2; ddp_relation -= 5; unemployed += 0.3
 
-We have cut funding for science. This has a negative effect on our economic growth, and unemployed scientists are less likely to support the SPD.
+We have cut funding for science. This has a negative effect on our economic growth, and unemployed scientists are less likely to support the PFJP.
 
 
 @structure
 title: Change the structure and funding of education.
 
-Education in Germany has traditionally been organized on religious and class lines. Schools are often either Protestant or Catholic (or rarely Jewish), and religious classes are required in most mixed-denomination schools. In addition, the working class has at most eight years of public education in primary and middle schools, while the middle and upper classes have access to private schools and Gymnasiums that prepare students for universities. Thus, the universities tend to be dominated by conservatives and reactionaries, which has negative consequences for bureaucratic recruitment.
+Education in Sordland has traditionally been organized on religious and class lines. Schools are always Sollist in nature (or rarely Jewish), and religious classes are required in most mixed-denomination schools. In addition, the working class has at most eight years of public education in primary and middle schools, while the middle and upper classes have access to private schools and Gymnasiums that prepare students for universities. Thus, the universities tend to be dominated by conservatives and reactionaries, which has negative consequences for bureaucratic recruitment.
 
 - @secularize
 - @public_hs
@@ -150,7 +150,7 @@ title: Change the educational curriculum.
 choose-if: curriculum_timer = 0
 unavailable-subtitle: [? if curriculum_timer > 0 : It is too early to change the curriculum again. ?][? if not spd_prussia: We are not in control of the Prussian state government. ?]
 
-Many socialists believe that education in Germany is not fit for the modern era. Much of the educational system still follows imperial-era traditions of militaristic discipline, and far-right professors and students rule the universities. Nevertheless, there have been strides in bringing working-class children into the schools.
+Many Reformists believe that education in Sordland is not fit for the modern era. Much of the educational system still follows Sollist traditions of militaristic discipline, and conservative professors and students rule the universities. Nevertheless, there have been strides in bringing working-class children into the schools.
 
 What should be the major focus of our new curriculum?
 
@@ -166,11 +166,11 @@ What should be the major focus of our new curriculum?
 
 @dem_major
 title: Democratic curriculum
-subtitle: Critical thinking, democratic citizenship, and collaboration
-on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); democratization += 1; z_relation -= 3; dvp_relation -= 5; coalition_dissent += 1 if in_grand_coalition; pacifism += 1; education_science += 0.3
+subtitle: Critical thinking, democratic citizenship, and collaboration and most importantly De-Sollinization 
+on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); democratization += 1; usp_relation -= 15; rural_spd -= 3*(1+dissent); coalition_dissent += 1 if in_grand_coalition; pacifism += 1; education_science += 0.3
 go-to: curriculum_minor
 
-We should teach students how to be citizens of a democratic republic, by teaching them to critically evaluate politics and current events, to exercise their rights and to respect the rights of other citizens. Traditionalists of all stripes are critical of this curriculum.
+We should teach students how to be citizens of a democratic republic, by teaching them to critically evaluate politics and current events, to exercise their rights and to respect the rights of other citizens. Traditionalists of all stripes are critical of this curriculum.However we have the luxury of our voters not being conservative 
 
 @science_major
 title: Scientific curriculum
@@ -178,7 +178,7 @@ subtitle: Modern science, mathematics, and technical skills
 on-arrival: curriculum_timer = 50; major_curriculum = "scientific"; education_science += 1; coalition_dissent += 1 if in_weimar_coalition; z_relation -= 5; ddp_relation += 4*(1-dissent); kpd_relation += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 2*(1-dissent)
 go-to: curriculum_minor
 
-Our educational system should reflect the modern age, and we should teach science and rational thinking. Religious conservatives tend to react negatively against this. 
+Our educational system should reflect the modern age, and we should teach science and rational thinking. Religious conservatives tend to react negatively against this.We have also forced schools to teach evolution however they may teach creationism if they like.
 
 @human_major
 title: Humanist curriculum
