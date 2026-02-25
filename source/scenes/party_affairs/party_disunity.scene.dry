@@ -13,9 +13,9 @@ tags: party_affairs
 
 The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies.
 
-[? if lib_dissent > 30 : The reformists are upset at our direction.  ?]
-[? if socdem_dissent > 30 : The centrists are displeased with the direction of our party. ?]
-[? if cap_dissent > 30 : The trade unions disagree with our present course of action. ?]
+[? if lib_dissent > 30 : The Liberals are upset at our direction.  ?]
+[? if socdem_dissent > 30 : The Social Democrats are displeased with the direction of our party. ?]
+[? if cap_dissent > 30 : The Industrialists disagree with our present course of action. ?]
 [? if left_dissent > 30: Leftists are making noises about another party split. ?]
 [? if neorevisionist_dissent > 30 and neorevisionism = 1 : Neorevisionists are in disagreement about our political direction. ?]
 
@@ -41,25 +41,25 @@ Enforcing party discipline reduces dissent, but it could lead to an exit of diss
 # each party has a concessions action and an expulsions action.
 
 @concessions_reformists
-title: Give concessions to the reformists.
-view-if: reformist_dissent > 30
-on-arrival: reformist_dissent -= 7; left_dissent += 5
+title: Give concessions to the Liberals.
+view-if: lib_dissent > 30
+on-arrival: lib_dissent -= 5; socdem_dissent += 1; cap_dissent += 1
 
-We have promised to adopt a more reformist posture. This may alienate the left, however.
+We have promised to adopt a more reformist posture. This may alienate the others slightly, however.
 
 @concessions_center
-title: Give concessions to the centrists.
+title: Give concessions to the Social Democrats.
 view-if: center_dissent > 30
-on-arrival: center_dissent -= 7; reformist_dissent += 2; left_dissent += 2; neorevisionist_dissent += 2
+on-arrival: socdem_dissent -= 5; lib_dissent += 2; cap_dissent += 5
 
-We have promised to take more policy suggestions from the centrists. Both the left and reformist wings of the party might be displeased.
+We have promised to take more policy suggestions from the Left. The Capitalist wing of the party might be displeased.
 
 @concessions_left
-title: Give concessions to the left.
+title: Give concessions to the Capitalists.
 view-if: left_dissent > 30
-on-arrival: left_dissent -= 7; reformist_dissent += 5
+on-arrival: cap_dissent -= 5; socdem_dissent += 5
 
-We have promised that we will listen to the left wing of the party. Of course, this leads to increased dissent from the centrists.
+We have promised that we will listen to the right wing of the party. Of course, this leads to increased dissent from the Social Democrats.
 
 @concessions_labor
 title: Give concessions to labor.
@@ -78,7 +78,7 @@ Giving the neorevisionists more influence will cause increased dissent from the 
 
 @do_nothing
 title: Let the factions argue with themselves.
-on-arrival: labor_dissent += 1; left_dissent += 1; center_dissent += 1; reformist_dissent += 1
+on-arrival: lib_dissent += 1; socdem_dissent += 1; cap_dissent += 1; reformist_dissent += 1
 
 Let the factions bicker; perhaps dissent is healthy for the party.
 
