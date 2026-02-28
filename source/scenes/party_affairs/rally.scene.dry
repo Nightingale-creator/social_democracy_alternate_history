@@ -83,6 +83,7 @@ Mass rallies are a common feature of  democratic life, especially in the lead-up
 
 @class_struggle
 on-arrival: workers_spd += 2*(1-dissent); new_middle_spd += 4*(1-dissent); old_middle_spd += 3(1-dissent); lib_strength += 3; lib_dissent -=3
+
 Our message of Freedom appeals to the middle class and gives hope to workers. 
 
 @welfare
