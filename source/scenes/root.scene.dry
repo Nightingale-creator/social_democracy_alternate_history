@@ -123,7 +123,7 @@ Q.hindenburg_enabled = 0;
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "PFJP"
+Q.prussian_government = "SPD"
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
@@ -339,6 +339,7 @@ Q.dvp_in_government = 0;
 Q.dnvp_in_government = 0;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
+Q.pres_party = "USP";
 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
