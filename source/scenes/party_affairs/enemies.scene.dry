@@ -26,7 +26,7 @@ on-arrival: enemies = "anti-democratic parties"; lib_strength += 5; lib_dissent 
 Attacking the far right and left is popular among all but the most left wing of our party, who would prefer to be fighting the Sollists. This might also hamper our ability to reconcile with the CPS in the future.
 
 @far_right
-on-arrival: enemies = "NFP"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
+on-arrival: enemies = "NFP"; socdem_strength += 5; socdem_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
 
 Attacking the far right is popular among the entire party, although some consider the USP to be just as dangerous, while the right is critical of our lack of response to the CPS. Sollists are also skeptical of our lack of commitment to anti-communism.
 
