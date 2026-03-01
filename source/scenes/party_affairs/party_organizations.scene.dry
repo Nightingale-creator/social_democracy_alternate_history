@@ -60,7 +60,7 @@ We have increased recruiting to the Republican Youth Federation.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: +2 resources,this will definitely upset other factions beside the Capitalists
-on-arrival: resources += 2; ; cap_strength += 5; lib_dissent += 3; socdem_dissent += 8; lib_strength -=3; socdem_strength += 3
+on-arrival: resources += 2; cap_strength += 5; lib_dissent += 3; socdem_dissent += 8;lib_strength -=3; socdem_strength += 3
 
 Our new funds are helpful in campaigning however our party is now moee polarized this brings new radicalism to the Party.
 
