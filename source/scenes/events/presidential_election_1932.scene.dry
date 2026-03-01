@@ -355,7 +355,7 @@ unavailable-subtitle: The KPD knows that they are more popular than us; they do 
 view-if: braun_campaign > 0 and kpd_support_braun == 0 
 max-visits: 1
 
-The KPD is committed to supporting Ernst Thälmann. [? if kpd_relation >= 45 : However, the Nazi-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if kpd_relation < 45 : They do not seem willing to be convinced. ?]
+The CPS is committed to supporting Denis Stahler. [? if kpd_relation >= 45 : However, the Nazi-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if kpd_relation < 45 : They do not seem willing to be convinced. ?]
 
 - @r2_kpd_resources: Use our resources.
 - @r2_kpd_relations: Use our good relations.
@@ -438,6 +438,6 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 
 
 @braun_wins
-on-arrival: president = " [+ z_party_leader +] "; lib_dissent -= 15; socdem_dissent -= 15; cap_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: president =  [+ z_party_leader +] ; lib_dissent -= 15; socdem_dissent -= 15; cap_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 
 [+ z_party_leader +] of the PFJP has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
