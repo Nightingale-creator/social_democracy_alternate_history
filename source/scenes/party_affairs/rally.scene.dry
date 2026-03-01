@@ -84,7 +84,7 @@ Mass rallies are a common feature of  democratic life, especially in the lead-up
 @class_struggle
 on-arrival: workers_spd += 2*(1-dissent); new_middle_spd += 4*(1-dissent); old_middle_spd += 3*(1-dissent); lib_strength += 3; lib_dissent -=3
 
-Our message of Freedom appeals to the middle class and gives hope to workers. 
+Our message of Freedom appeals to the middle class and gives hope to workers.The dawn of the torch of Liberty ignites passion in those listening.
 
 @welfare
 on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; socdem_strength += 3; socdem_dissent -= 3; 
@@ -102,9 +102,9 @@ on-arrival: cap_strength += 5; old_middle_spd += 4*(1-dissent); new_middle_spd +
 The Focus on Economic Liberalism inspires the merchants to vote for us. 
 
 @pacifism
-on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
+on-arrival: catholic_spd += 3*(1-dissent); nationalism -= 2*(1 - dissent); workers_spd += 2*(1 - dissent); nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); wpb_relation +=5
 
-Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
+Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Civil War.
 
 [? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
