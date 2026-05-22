@@ -53,6 +53,7 @@ header, #content, footer {
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 8 em
 }
 footer {
   margin-top: 1em;
