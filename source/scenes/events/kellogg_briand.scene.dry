@@ -1,7 +1,7 @@
 title: Tech Demo 2
 new-page: true
 subtitle: An international treaty for peace
-view-if: year = 1928 and month = 4
+view-if: year = 1928 and month = 6
 max-visits: 1
 on-arrival: kellogg_briand_signed = 1
 tags: event
