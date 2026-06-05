@@ -20,7 +20,7 @@ face-image: img/spd.jpg
 Actually i was lying heres the SPD made by Ney.
 
 @dnvp
-view-if: ddp_dstp_seen = 1;
+view-if: ddp_dstp_seen = 1
 face-image: img/dnvp.jpg
 
 ok fine heres the DNVP by Ney again.
