@@ -234,6 +234,330 @@
       return bar;
   };
 
+  //custom music system for multiple layers of music
+  window.AudioManager = (function() {
+    var layers = {
+        music: {
+            playlist: [
+                'out/html/music/Im_A_Dude.mp3'
+            ],
+            currentIndex: 0,
+            audio: null,
+            volume: 1.0,
+            enabled: true
+        },
+        ambient: {
+            playlist: [],
+            currentIndex: 0,
+            audio: null,
+            volume: 0.4,
+            enabled: false
+        },
+        sfx: {
+            playlist: [],
+            currentIndex: 0,
+            audio: null,
+            volume: 0.6,
+            enabled: true
+        }
+    };
+
+    var muted = false;
+    var started = false;
+
+    function shuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+        }
+    }
+
+    function playLayer(layerName) {
+            var layer = layers[layerName];
+            if (!layer || !layer.enabled || layer.playlist.length === 0) return;
+            var targetVol = muted ? 0 : layer.volume;
+
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
+            }
+
+            setTimeout(function() {
+                var newAudio = new Audio(layer.playlist[layer.currentIndex]);
+                layer.audio = newAudio;
+                newAudio.volume = 0;
+                newAudio.play().catch(function() {});
+                var fadeIn = setInterval(function() {
+                    if (newAudio.volume < targetVol - 0.05) {
+                        newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
+                    } else {
+                        newAudio.volume = targetVol;
+                        clearInterval(fadeIn);
+                    }
+                }, 50);
+                newAudio.onended = function() {
+                    layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+                    playLayer(layerName);
+                };
+            }, 800);
+    }
+
+    function stopLayer(layerName) {
+        var layer = layers[layerName];
+        if (layer && layer.audio) {
+            layer.audio.pause();
+            layer.audio = null;
+        }
+    }
+
+    return {
+        started: false,
+
+        init: function() {
+        },
+
+        start: function() {
+            this.started = true;
+        },
+
+        mute: function() {
+            muted = true;
+            for (var name in layers) {
+                if (layers[name].audio) layers[name].audio.pause();
+            }
+        },
+
+        unmute: function() {
+            muted = false;
+            for (var name in layers) {
+                if (layers[name].audio) layers[name].audio.play().catch(function() {});
+            }
+        },
+
+        isMuted: function() { return muted; },
+
+        skip: function(layerName) {
+            var sfxLayer = layers['sfx'];
+            if (sfxLayer && sfxLayer.enabled) {
+                var sfxAudio = new Audio('music/sfx/radio_static.mp3');
+                sfxAudio.volume = sfxLayer.volume;
+                sfxAudio.play().catch(function() {});
+            }
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
+            }
+            layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+            setTimeout(function() {
+                playLayer(name);
+            }, 400);
+        },
+
+        previous: function(layerName) {
+            var sfxLayer = layers['sfx'];
+            if (sfxLayer && sfxLayer.enabled) {
+                var sfxAudio = new Audio('music/sfx/radio_static.mp3');
+                sfxAudio.volume = sfxLayer.volume;
+                sfxAudio.play().catch(function() {});
+            }
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
+            }
+            layer.currentIndex = (layer.currentIndex - 1 + layer.playlist.length) % layer.playlist.length;
+            setTimeout(function() {
+                playLayer(name);
+            }, 400);
+        },
+
+        playSong: function(path, layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            var targetVol = muted ? 0 : layer.volume;
+
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null; // remove existing ended listener
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
+            }
+
+            setTimeout(function() {
+                var newAudio = new Audio(path);
+                layer.audio = newAudio;
+                newAudio.volume = 0;
+                newAudio.play().catch(function() {});
+                var fadeIn = setInterval(function() {
+                    if (newAudio.volume < targetVol - 0.05) {
+                        newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
+                    } else {
+                        newAudio.volume = targetVol;
+                        clearInterval(fadeIn);
+                    }
+                }, 50);
+                newAudio.onended = function() {
+                    layer.currentIndex = (layer.currentIndex + 1) % layer.playlist.length;
+                    playLayer(name);
+                };
+            }, 400);
+        },
+
+        playSongOnce: function(path, layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            var targetVol = muted ? 0 : layer.volume;
+
+            if (layer.audio) {
+                var old = layer.audio;
+                old.onended = null;
+                var fadeOut = setInterval(function() {
+                    if (old.volume > 0.05) {
+                        old.volume = Math.max(0, old.volume - 0.05);
+                    } else {
+                        old.pause();
+                        clearInterval(fadeOut);
+                    }
+                }, 50);
+            }
+
+            setTimeout(function() {
+                var newAudio = new Audio(path);
+                layer.audio = newAudio;
+                newAudio.volume = 0;
+                newAudio.play().catch(function() {});
+                var fadeIn = setInterval(function() {
+                    if (newAudio.volume < targetVol - 0.05) {
+                        newAudio.volume = Math.min(targetVol, newAudio.volume + 0.05);
+                    } else {
+                        newAudio.volume = targetVol;
+                        clearInterval(fadeIn);
+                    }
+                }, 50);
+                newAudio.onended = null; // nothing plays after
+            }, 400);
+        },
+
+        addSong: function(layerName, path) {
+            layers[layerName].playlist.push(path);
+        },
+
+        removeSong: function(layerName, path) {
+            var pl = layers[layerName].playlist;
+            var idx = pl.indexOf(path);
+            if (idx > -1) pl.splice(idx, 1);
+        },
+
+        enableLayer: function(layerName) {
+            layers[layerName].enabled = true;
+            playLayer(layerName);
+        },
+
+        disableLayer: function(layerName) {
+            layers[layerName].enabled = false;
+            stopLayer(layerName);
+        },
+
+        pause: function(layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) layer.audio.pause();
+        },
+
+        resume: function(layerName) {
+            var name = layerName || 'music';
+            var layer = layers[name];
+            if (layer.audio) layer.audio.play().catch(function() {});
+        },
+
+        setVolume: function(layerName, vol) {
+            var names = layerName === 'music' ? ['music', 'ambient', 'sfx'] : [layerName];
+            for (var i = 0; i < names.length; i++) {
+                layers[names[i]].volume = vol;
+                if (layers[names[i]].audio && !muted) {
+                    layers[names[i]].audio.volume = vol;
+                }
+            }
+        },
+    };
+  }());
+
+  window.disableAudio = function() {
+    AudioManager.mute();
+    window.dendryUI.toggle_audio(false);
+  };
+
+  window.enableAudio = function() {
+    AudioManager.unmute();
+  };
+
+  window.toggleMusicButton = function() {
+    var onIcon = document.getElementById('music-on-icon');
+    var offIcon = document.getElementById('music-off-icon');
+    if (AudioManager.isMuted()) {
+        AudioManager.unmute();
+        onIcon.style.display = '';
+        offIcon.style.display = 'none';
+    } else {
+        AudioManager.mute();
+        onIcon.style.display = 'none';
+        offIcon.style.display = '';
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('music-toggle-btn').onclick = function(e) {
+        window.toggleMusicButton();
+    };
+  });
+
+  window.skipSong = function() {
+    AudioManager.skip('music');
+  };
+
+  window.updateMusicBtn = function() {
+      var disabled = window.dendryUI && window.dendryUI.disable_audio;
+      var onIcon = document.getElementById('music-on-icon');
+      var offIcon = document.getElementById('music-off-icon');
+      if (onIcon && offIcon) {
+          onIcon.style.display = disabled ? 'none' : 'inline';
+          offIcon.style.display = disabled ? 'inline' : 'none';
+      }
+  };
+
 
   window.justLoaded = true;
   window.statusTab = "status";
