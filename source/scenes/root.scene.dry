@@ -581,7 +581,6 @@ window.AudioManager.start();
 window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')
 
 !}
-
 set-bg: img/class.jpg
 new-page: true
 
