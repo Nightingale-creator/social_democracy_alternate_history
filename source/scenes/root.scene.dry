@@ -594,7 +594,14 @@ For more information on the politics and government of the German Republic, see 
 
 @1928_easy
 on-arrival: {! 
-difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+Q.difficulty = -1; 
+Q.resources = 4; 
+Q.dues = 3; 
+Q.rb_strength = 2500; 
+Q.kpd_relation = 29; 
+Q.z_relation = 54; 
+Q.dvp_relation = 49; 
+Q.budget = 5;
 window.AudioManager.start(); window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')
 !}
 go-to: 1928_main
