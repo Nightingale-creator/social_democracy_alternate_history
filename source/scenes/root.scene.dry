@@ -593,7 +593,10 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+on-arrival: {! 
+difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+window.AudioManager.start(); window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')
+!}
 go-to: 1928_main
 
 @1928_hard
@@ -623,7 +626,7 @@ go-to: 1928_main
 @1928_main
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-on-arrival: {! window.AudioManager.start(); window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx'); !}
+on-arrival: {! window.AudioManager.start(); window.AudioManager.playSongOnce('music/Rhine_no_Mamori.mp3', 'music'); !}
 
 = 1928
 
