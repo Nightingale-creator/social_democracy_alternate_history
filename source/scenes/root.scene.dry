@@ -575,7 +575,13 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
+
+//music shi
+window.AudioManager.start(); 
+window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')
+
 !}
+
 set-bg: img/class.jpg
 new-page: true
 
@@ -602,7 +608,6 @@ Q.kpd_relation = 29;
 Q.z_relation = 54; 
 Q.dvp_relation = 49; 
 Q.budget = 5;
-window.AudioManager.start(); window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')
 !}
 go-to: 1928_main
 
@@ -633,7 +638,7 @@ go-to: 1928_main
 @1928_main
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-on-arrival: {! window.AudioManager.start(); window.AudioManager.playSongOnce('music/Rhine_no_Mamori.mp3', 'music'); !}
+on-arrival: {! window.AudioManager.playSongOnce('music/Rhine_no_Mamori.mp3', 'music'); !}
 
 = 1928
 
