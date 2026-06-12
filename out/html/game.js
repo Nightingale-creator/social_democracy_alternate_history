@@ -239,7 +239,8 @@
     var layers = {
         music: {
             playlist: [
-                'out/html/music/Im_A_Dude.mp3'
+                'music/Im_A_Dude.mp3',
+                'music/Einheitsfront.mp3'
             ],
             currentIndex: 0,
             audio: null,
@@ -565,6 +566,8 @@
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
   window.onload = function() {
+    window.dendryUI.toggle_audio(false);
+    AudioManager.init();
     window.dendryUI.loadSettings({show_portraits: false});
     if (window.dendryUI.dark_mode) {
         document.body.classList.add('dark-mode');
