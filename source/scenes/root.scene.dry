@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: A Visual Novel (Update: fuck you Bro)
+= Social Democracy: A Visual Novel (Update: SPD YURI!?!?!??!)
 
 @start_menu_2
 
@@ -623,7 +623,7 @@ go-to: 1928_main
 @1928_main
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-on-arrival: {! window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx'); !}
+on-arrival: {! window.AudioManager.start(); window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx'); !}
 
 = 1928
 
