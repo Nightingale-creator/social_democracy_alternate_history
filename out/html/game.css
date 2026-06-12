@@ -42,18 +42,23 @@ body.dark-mode .tools {
   border-color: #888;
 }
 header, #content, footer {
-  color: var(--text-color);
-  max-width: 540px;
+  max-width: 100%;
   margin: 0 auto;
   overflow: auto;
 }
 #content {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  margin-top: 0;
+  padding: 1em 2em;
   background-color: var(--content-bg-color);
-  font-size: 1.1em;
-  padding: 1em 1.5em 1.5em 1.5em;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  margin-top: 16em;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+  max-height: 40vh;
+  overflow-y: auto;
+  z-index: 10;
 }
 footer {
   margin-top: 1em;
