@@ -239,7 +239,7 @@
     var layers = {
         music: {
             playlist: [
-                'music/Im_A_Dude.mp3',
+                'music/Rhine_no_Mamori.mp3',
                 'music/Einheitsfront.mp3',
                 'music/Rhine_no_Mamori.mp3'
             ],
