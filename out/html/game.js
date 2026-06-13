@@ -234,7 +234,7 @@
       return bar;
   };
 
-  //custom music system for multiple layers of music
+  //custom music system for multiple layers of music by Communist45 and Puddle originally for Beeshana Kalaya
   window.AudioManager = (function() {
     var layers = {
         music: {
