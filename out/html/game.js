@@ -349,9 +349,7 @@
         skip: function(layerName) {
             var sfxLayer = layers['sfx'];
             if (sfxLayer && sfxLayer.enabled) {
-                var sfxAudio = new Audio('music/sfx/radio_static.mp3');
-                sfxAudio.volume = sfxLayer.volume;
-                sfxAudio.play().catch(function() {});
+                window.AudioManager.playSongOnce('music/sfx/your_sfx.mp3', 'sfx');
             }
             var name = layerName || 'music';
             var layer = layers[name];
@@ -376,9 +374,7 @@
         previous: function(layerName) {
             var sfxLayer = layers['sfx'];
             if (sfxLayer && sfxLayer.enabled) {
-                var sfxAudio = new Audio('music/sfx/radio_static.mp3');
-                sfxAudio.volume = sfxLayer.volume;
-                sfxAudio.play().catch(function() {});
+                window.AudioManager.playSongOnce('music/sfx/your_sfx.mp3', 'sfx');
             }
             var name = layerName || 'music';
             var layer = layers[name];
