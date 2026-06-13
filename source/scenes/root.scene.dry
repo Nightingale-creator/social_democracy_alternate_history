@@ -576,6 +576,10 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 
+//music shi
+window.AudioManager.start(); 
+window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')
+
 !}
 set-bg: img/class.jpg
 new-page: true
@@ -633,7 +637,7 @@ go-to: 1928_main
 @1928_main
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-on-arrival: {! window.AudioManager.playSongOnce('music/Rhine_no_Mamori.mp3', 'music'); window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')!}
+on-arrival: {! window.AudioManager.playSongOnce('music/Rhine_no_Mamori.mp3', 'music'); !}
 
 = 1928
 
