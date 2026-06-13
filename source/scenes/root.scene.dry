@@ -637,7 +637,6 @@ on-arrival: {!
 //music shi
 window.AudioManager.start(); 
 window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx'); 
-window.AudioManager.playSongOnce('music/Rhine_no_Mamori.mp3', 'music'); 
 !}
 
 = 1928
