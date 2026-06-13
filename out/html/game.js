@@ -240,8 +240,7 @@
         music: {
             playlist: [
                 'music/Rhine_no_Mamori.mp3',
-                'music/Einheitsfront.mp3',
-                'music/Rhine_no_Mamori.mp3'
+                'music/Einheitsfront.mp3'
             ],
             currentIndex: 0,
             audio: null,
