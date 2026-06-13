@@ -188,34 +188,33 @@ blockquote + blockquote.attribution {
 }
 /* This is mostly copied from undum. */
 #mid_panel {
-  margin: 0 16rem;
+    margin: 0 auto;
+    max-width: 40%;
+    position: relative;
+    left: 0;
 }
+
 #page {
-  margin: 0 auto;
-  position: relative;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
 }
+
 #tools_wrapper {
-  position: absolute;
-  width: 100%;
-  max-width: 69em;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+    position: relative;
+    width: 100%;
+    max-width: none;
 }
-.tools {
-  padding: 0.6em;
-  width: 14rem;
-  color: var(--text-color);
-  background-color: var(--content-bg-color);
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-}
+
 .tools.left {
-  float: left;
-  left: 0.4em;
+    float: left;
+    width: 14rem;
 }
+
 .tools.right {
-  float: right;
-  right: 0.4em;
+    float: right;
+    width: 14rem;
 }
 #qualities {
   text-indent: 0;

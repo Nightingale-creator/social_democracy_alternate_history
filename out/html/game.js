@@ -328,6 +328,7 @@
 
         start: function() {
             this.started = true;
+            playLayer('music');
         },
 
         mute: function() {
