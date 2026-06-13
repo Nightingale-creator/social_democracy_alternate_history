@@ -633,7 +633,7 @@ go-to: 1928_main
 @1928_main
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-on-arrival: {! window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')!}
+on-arrival: {! window.AudioManager.playSongOnce('music/Rhine_no_Mamori.mp3', 'music'); window.AudioManager.playSongOnce('music/sfx/School Bell.mp3', 'sfx')!}
 
 = 1928
 
